@@ -21,7 +21,10 @@ jobs:
       - name: install ssh
         run: |
           install -m 600 -D /dev/null ~/.ssh/id_rsa
-          echo "${{secrets.PRIVATE_SSH_KEY}}" > ~/.ssh/id_rsa
-          echo "${{secrets.KNOWN_HOSTS}}" > ~/.ssh/known_hosts
+          echo "${{ secrets.PRIVATE_SSH_KEY }}"
+          echo "========================="
+          echo "${{ secrets.KNOWN_HOSTS }}"
+          echo "${{ secrets.PRIVATE_SSH_KEY }}" > ~/.ssh/id_rsa
+          echo "${{ secrets.KNOWN_HOSTS }}" > ~/.ssh/known_hosts
       - name: deploy
         run: rsync --archive --stats site/ ${{ secrets.REMOTE_DEST }}
