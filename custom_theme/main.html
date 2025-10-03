@@ -1,26 +1,27 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {# Add custom meta tags #} {% block extrahead %}
+<meta name="description" content="{{ config.site_description }}" />
+<meta name="author" content="{{ config.site_author }}" />
+<meta property="og:title" content="{{ config.site_name }}" />
+<meta property="og:description" content="{{ config.site_description }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ config.site_url }}" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ config.site_name }}" />
+<meta name="twitter:description" content="{{ config.site_description }}" />
+<link rel="stylesheet" href="{{ 'assets/stylesheets/extra.css' | url }}" />
 
-{# Add custom meta tags #}
-{% block extrahead %}
-  <meta name="description" content="{{ config.site_description }}">
-  <meta name="author" content="{{ config.site_author }}">
-  <meta property="og:title" content="{{ config.site_name }}">
-  <meta property="og:description" content="{{ config.site_description }}">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="{{ config.site_url }}">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ config.site_name }}">
-  <meta name="twitter:description" content="{{ config.site_description }}">
-  <link rel="stylesheet" href="{{ 'assets/stylesheets/extra.css' | url }}">
+{# React CDN - Added for interactive components #}
+<script
+  crossorigin
+  src="https://unpkg.com/react@18/umd/react.production.min.js"
+></script>
+<script
+  crossorigin
+  src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+></script>
+{% endblock %} {# Override the header #} {% block header %} {% include
+"partials/header.html" %} {% endblock %} {# Override the footer #} {% block
+footer %} {% include "partials/footer.html" %} {% endblock %} {# Add React
+components script #} {% block scripts %} {{ super() }}
+<script src="{{ 'assets/javascripts/react-components.js' | url }}"></script>
 {% endblock %}
-
-{# Override the header #}
-{% block header %}
-  {% include "partials/header.html" %}
-{% endblock %}
-
-{# Override the footer #}
-{% block footer %}
-  {% include "partials/footer.html" %}
-{% endblock %}
-

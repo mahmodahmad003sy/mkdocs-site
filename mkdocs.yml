@@ -55,6 +55,7 @@ nav:
   - Home: index.md
   - Getting Started: getting-started.md
   - Features: features.md
+  - React Demo: react-demo.md
   - About: about.md
 
 copyright: Copyright &copy; 2024 Mahmod Ahmad. All rights reserved.
