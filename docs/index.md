@@ -1,17 +1,69 @@
-# Welcome to MkDocs
+# Welcome
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+<div class="hero-section" markdown>
 
-## Commands
+# Simple Documentation
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+Built with MkDocs and Jinja2 templates.
 
-## Project layout
+<div class="hero-buttons">
+[Get Started](getting-started.md){ .hero-button }
+[Features](features.md){ .hero-button .secondary }
+</div>
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+</div>
+
+## Quick Features
+
+<div class="features-grid">
+
+<div class="feature-card" markdown>
+<div class="feature-icon">🎨</div>
+
+### Custom Theme
+
+Custom header, footer, and styled pages.
+
+</div>
+
+<div class="feature-card" markdown>
+<div class="feature-icon">📱</div>
+
+### Responsive
+
+Works on all devices.
+
+</div>
+
+<div class="feature-card" markdown>
+<div class="feature-icon">🌙</div>
+
+### Dark Mode
+
+Light and dark themes.
+
+</div>
+
+<div class="feature-card" markdown>
+<div class="feature-icon">⚡</div>
+
+### Auto Deploy
+
+GitHub Pages ready.
+
+</div>
+
+</div>
+
+## Quick Start
+
+```bash
+pip install -r requirements.txt
+mkdocs serve
+```
+
+## Pages
+
+- [Getting Started](getting-started.md)
+- [Features](features.md)
+- [About](about.md)
